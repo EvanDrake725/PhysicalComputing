@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bhnki3w6mf2ou"]
+
+[ext_resource type="Texture2D" uid="uid://coen8c0m0rf57" path="res://icon.svg" id="1_w4o3v"]
+[ext_resource type="Script" uid="uid://cxq4kf3uiaalt" path="res://firepit.gd" id="1_xi0oj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2x4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_431xq"]
+
+[node name="Firepit" type="CharacterBody2D" unique_id=2100539933]
+scale = Vector2(8.039998, 10.353668)
+script = ExtResource("1_xi0oj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=473391085]
+shape = SubResource("RectangleShape2D_f2x4k")
+
+[node name="Icon" type="Sprite2D" parent="CollisionShape2D" unique_id=44668534]
+position = Vector2(0.124378204, -0.38632965)
+scale = Vector2(0.14925393, 0.15839797)
+texture = ExtResource("1_w4o3v")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=168408821]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1469648632]
+scale = Vector2(1.2189051, 1.2189052)
+shape = SubResource("RectangleShape2D_431xq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
