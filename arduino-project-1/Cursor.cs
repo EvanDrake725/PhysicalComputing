@@ -28,16 +28,13 @@ public partial class Cursor : CharacterBody2D
     {
         Vector2 velocity = Velocity;
 
-        // 1. Apply gravity if in the air (And NOT climbing a ladder)
         if (!IsOnFloor() && !Ladder)
         {
             velocity += GetGravity() * (float)delta;
         }
 
-        // 2. Reset HORIZONTAL velocity (Keep Y so gravity/jumping works)
         velocity.X = 0;
 
-        // If on a ladder and not actively moving up/down, stop falling
         if (Ladder)
         {
             velocity.Y = 0;
@@ -53,7 +50,6 @@ public partial class Cursor : CharacterBody2D
                 {
                     string serialMessage = serialPort.ReadLine().Trim();
 
-                    // Horizontal Movement
                     if (serialMessage == "LEFT")
                     {
                         velocity.X = -Speed;
@@ -75,7 +71,6 @@ public partial class Cursor : CharacterBody2D
                         }
                     }
 
-                    // Ladder Movement
                     if (Ladder && NearLadder) 
                     {
                         velocity.Y = 0;
@@ -97,7 +92,6 @@ public partial class Cursor : CharacterBody2D
                         CollisionMask=1;
                     }
                     
-                    // Jumping (Only allowed if on the floor and not on a ladder)
                     if (serialMessage == "ACTIVE" && IsOnFloor() && !Ladder)
                     {
                         velocity.Y = JumpVelocity;
@@ -106,7 +100,6 @@ public partial class Cursor : CharacterBody2D
             }
             catch (TimeoutException)
             {
-                // Timeout is fine, just ignore it
             }
         }
 
