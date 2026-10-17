@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://csyxr14ryncle"]
 
-[ext_resource type="Texture2D" uid="uid://coen8c0m0rf57" path="res://icon.svg" id="1_7sd64"]
+[ext_resource type="Texture2D" uid="uid://dqmy2qqt0k3oj" path="res://tank.png" id="1_7sd64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg6i6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txa06"]
+atlas = ExtResource("1_7sd64")
+region = Rect2(944.13696, 1100.2375, 929.4751, 259.7063)
 
 [node name="StaticBody2D3" type="StaticBody2D" unique_id=1279510305]
 rotation = 0.08676155
@@ -14,8 +18,8 @@ scale = Vector2(8.975606, 1)
 shape = SubResource("RectangleShape2D_tg6i6")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1773901217]
-position = Vector2(-10.303322, 22.675648)
+position = Vector2(-5.1302958, 24.692757)
 rotation = 0.0048686746
-scale = Vector2(1.4753774, 0.16532916)
+scale = Vector2(0.22520864, 0.11461454)
 skew = -0.0035300255
-texture = ExtResource("1_7sd64")
+texture = SubResource("AtlasTexture_txa06")

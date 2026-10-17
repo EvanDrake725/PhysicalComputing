@@ -11,13 +11,12 @@
 
 [node name="Node2D" type="Node2D" unique_id=897028422]
 
-[node name="Cursor" parent="." unique_id=1079927006 groups=["Player"] instance=ExtResource("1_yp1n5")]
-position = Vector2(56, 514)
-script = ExtResource("2_tg6i6")
-
 [node name="Ladder" parent="." unique_id=53871529 instance=ExtResource("3_4pwfj")]
 position = Vector2(1255, -68)
 scale = Vector2(0.956, 0.87)
+
+[node name="End" parent="." unique_id=1308415847 instance=ExtResource("8_l38vx")]
+position = Vector2(526, -2020)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=674634659]
 position = Vector2(646.00006, -785)
@@ -131,5 +130,6 @@ position = Vector2(140, -17)
 [node name="Barrel5" parent="." unique_id=335089071 instance=ExtResource("6_bujt0")]
 position = Vector2(1134, 81)
 
-[node name="End" parent="." unique_id=1308415847 instance=ExtResource("8_l38vx")]
-position = Vector2(526, -2020)
+[node name="Cursor" parent="." unique_id=1079927006 groups=["Player"] instance=ExtResource("1_yp1n5")]
+position = Vector2(56, 514)
+script = ExtResource("2_tg6i6")

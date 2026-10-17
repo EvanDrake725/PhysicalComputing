@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://bhnki3w6mf2ou"]
 
-[ext_resource type="Texture2D" uid="uid://coen8c0m0rf57" path="res://icon.svg" id="1_w4o3v"]
 [ext_resource type="Script" uid="uid://cxq4kf3uiaalt" path="res://firepit.gd" id="1_xi0oj"]
+[ext_resource type="Texture2D" uid="uid://dqmy2qqt0k3oj" path="res://tank.png" id="2_xi0oj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2x4k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_431xq"]
+atlas = ExtResource("2_xi0oj")
+region = Rect2(0, 1145.8, 274.36816, 246.0376)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_431xq"]
 
@@ -15,9 +19,9 @@ script = ExtResource("1_xi0oj")
 shape = SubResource("RectangleShape2D_f2x4k")
 
 [node name="Icon" type="Sprite2D" parent="CollisionShape2D" unique_id=44668534]
-position = Vector2(0.124378204, -0.38632965)
-scale = Vector2(0.14925393, 0.15839797)
-texture = ExtResource("1_w4o3v")
+position = Vector2(-3.669153, -0.38632965)
+scale = Vector2(0.20926397, 0.15839797)
+texture = SubResource("AtlasTexture_431xq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=168408821]
 collision_layer = 4

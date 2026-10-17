@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://csv1nf7mkrcbe"]
 
 [ext_resource type="Script" uid="uid://thnnuxeqcijf" path="res://boss.gd" id="1_6xxrv"]
-[ext_resource type="Texture2D" uid="uid://coen8c0m0rf57" path="res://icon.svg" id="2_skx2t"]
+[ext_resource type="Texture2D" uid="uid://dqmy2qqt0k3oj" path="res://tank.png" id="2_6xxrv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bujt0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skx2t"]
+atlas = ExtResource("2_6xxrv")
+region = Rect2(452.062, 1382.7251, 487.5188, 617.2749)
 
 [node name="Boss" type="CharacterBody2D" unique_id=1101386691]
 scale = Vector2(13.84, 13.84)
@@ -16,8 +20,8 @@ shape = SubResource("RectangleShape2D_bujt0")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1832478121]
 position = Vector2(0, -0.36127168)
-scale = Vector2(0.15606953, 0.15606953)
-texture = ExtResource("2_skx2t")
+scale = Vector2(-0.043352425, 0.040462665)
+texture = SubResource("AtlasTexture_skx2t")
 
 [node name="SpawnPoint" type="StaticBody2D" parent="." unique_id=2041044882]
 position = Vector2(19.653183, 6.6473985)

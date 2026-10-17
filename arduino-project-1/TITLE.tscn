@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://bn0ht35of1ki7"]
 
 [ext_resource type="Script" uid="uid://w36fkprugnu2" path="res://Title.cs" id="1_bd6lo"]
+[ext_resource type="Texture2D" uid="uid://dqmy2qqt0k3oj" path="res://tank.png" id="2_ndwfu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfvvy"]
+atlas = ExtResource("2_ndwfu")
+region = Rect2(0, 0, 1129.5938, 967.994)
 
 [node name="Node2D" type="Node2D" unique_id=1630257315]
 script = ExtResource("1_bd6lo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1696826382]
+position = Vector2(575.75, 322.25)
+scale = Vector2(1.0279008, 0.66132367)
+texture = SubResource("AtlasTexture_hfvvy")

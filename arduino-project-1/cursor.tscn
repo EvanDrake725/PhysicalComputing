@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://cfsugq3q08ce3"]
 
 [ext_resource type="Script" uid="uid://bbryje0rbrk1s" path="res://player.cs" id="1_5l68f"]
-[ext_resource type="Texture2D" uid="uid://coen8c0m0rf57" path="res://icon.svg" id="2_e4vdg"]
+[ext_resource type="Texture2D" uid="uid://dqmy2qqt0k3oj" path="res://tank.png" id="2_5l68f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4vdg"]
+atlas = ExtResource("2_5l68f")
+region = Rect2(0, 1469.294, 356.38086, 287.0437)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qf7gk"]
 
@@ -10,9 +14,9 @@ scale = Vector2(7.4800014, 7.4800014)
 script = ExtResource("1_5l68f")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=732121517]
-position = Vector2(0.14204517, -0.42614314)
-scale = Vector2(0.14204581, 0.14204581)
-texture = ExtResource("2_e4vdg")
+position = Vector2(-1.3368988, 0.6684494)
+scale = Vector2(0.088170804, 0.088170804)
+texture = SubResource("AtlasTexture_e4vdg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=855124953]
 position = Vector2(3.8146973e-06, 0)

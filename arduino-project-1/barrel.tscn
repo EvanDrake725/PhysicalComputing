@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://ddhr5rsoq5hvl"]
 
 [ext_resource type="Script" uid="uid://dlby887itrh0k" path="res://barrel.gd" id="1_a12vh"]
-[ext_resource type="Texture2D" uid="uid://coen8c0m0rf57" path="res://icon.svg" id="1_n8un1"]
+[ext_resource type="Texture2D" uid="uid://dqmy2qqt0k3oj" path="res://tank.png" id="2_a12vh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8fqor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdxsi"]
+atlas = ExtResource("2_a12vh")
+region = Rect2(278.92456, 1141.2439, 209.5874, 250.59375)
 
 [node name="Barrel" type="CharacterBody2D" unique_id=90317382 groups=["Barrel"]]
 collision_layer = 5
@@ -16,9 +20,10 @@ scale = Vector2(3.8104367, 3.8104367)
 shape = SubResource("CircleShape2D_8fqor")
 
 [node name="Icon" type="Sprite2D" parent="CollisionShape2D" unique_id=1744931965]
-position = Vector2(-0.59880245, -0.14970061)
-scale = Vector2(0.14970061, 0.14970061)
-texture = ExtResource("1_n8un1")
+position = Vector2(0.4608009, 1.5945549)
+rotation = 2.1030188
+scale = Vector2(0.11357609, 0.11357609)
+texture = SubResource("AtlasTexture_rdxsi")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=145721145]
 scale = Vector2(1.4122858, 1.4122858)
